@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import LineChartBlock from "../components/LineCharts/LineChartBlock";
 
 export default function Home() {
     const containerVariant = {
@@ -45,7 +46,9 @@ export default function Home() {
                         ANIMATING GRADIENT
                     </motion.h1>
                 </div>
-                <div>hello</div>
+                <div className="my-6 flex justify-center ">
+                    <LineChartBlock />
+                </div>
             </main>
         </motion.div>
     );
