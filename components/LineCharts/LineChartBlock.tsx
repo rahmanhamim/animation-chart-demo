@@ -20,7 +20,7 @@ const data = [
 
 const LineChartBlock = () => {
     return (
-        <div className="border">
+        <div className="border border-slate-500 p-5">
             <LineChart width={600} height={300} data={data}>
                 <Line
                     dot={false}

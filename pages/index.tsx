@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import BarChartBlock from "../components/BarCharts/BarChartBlock";
 import LineChartBlock from "../components/LineCharts/LineChartBlock";
+import RadialChartBlock from "../components/RadialCharts/RadialChartBlock";
 
 export default function Home() {
     const containerVariant = {
@@ -46,8 +48,16 @@ export default function Home() {
                         ANIMATING GRADIENT
                     </motion.h1>
                 </div>
-                <div className="my-6 flex justify-center ">
-                    <LineChartBlock />
+                <div className="grid grid-cols-2 gap-14 py-8">
+                    <div>
+                        <LineChartBlock />
+                    </div>
+                    <div>
+                        <BarChartBlock />
+                    </div>
+                    <div>
+                        <RadialChartBlock />
+                    </div>
                 </div>
             </main>
         </motion.div>
