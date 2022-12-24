@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.textGradient {
+    /* border: 2px solid red; */
+    background-image: linear-gradient(
+        90deg,
+        rgba(172, 140, 199, 1) 0%,
+        rgba(213, 86, 134, 1) 29%,
+        rgba(227, 176, 170, 1) 52%,
+        rgb(107, 170, 206) 74%,
+        rgba(144, 180, 97, 1) 89%,
+        rgba(171, 132, 215, 1) 100%
+    );
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: text-gradient-animation 5s infinite alternate;
+    background-position: left;
+}
+
+@keyframes text-gradient-animation {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: top;
+    }
+    100% {
+        background-position: right;
+    }
+}
