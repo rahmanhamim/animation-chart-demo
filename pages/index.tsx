@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
-import BarChartBlock from "../components/BarCharts/BarChartBlock";
+import dynamic from "next/dynamic";
 import LineChartBlock from "../components/LineCharts/LineChartBlock";
-import RadialChartBlock from "../components/RadialCharts/RadialChartBlock";
+// import BarChartBlock from "../components/BarCharts/BarChartBlock";
+// import RadialChartBlock from "../components/RadialCharts/RadialChartBlock";
+
+const BarChartBlock = dynamic(
+    () => import("../components/BarCharts/BarChartBlock"),
+    {
+        ssr: false,
+    }
+);
+const RadialChartBlock = dynamic(
+    () => import("../components/RadialCharts/RadialChartBlock"),
+    {
+        ssr: false,
+    }
+);
 
 export default function Home() {
     const containerVariant = {
@@ -37,26 +51,28 @@ export default function Home() {
             variants={containerVariant}
             initial="hidden"
             animate="visible"
-            className="bg-slate-900 overflow-hidden text-white min-h-screen"
+            className="bg-slate-900 overflow-hidden text-white min-h-screen p-8"
         >
-            <main className="container mx-auto">
-                <div className="bg-slate-100 p-10 pb-14 rounded-md w-fit mx-auto mt-16">
-                    <motion.h1
-                        variants={childVariants}
-                        className="text-6xl font-extrabold textGradient"
-                    >
-                        ANIMATING GRADIENT
-                    </motion.h1>
-                </div>
-                <div className="grid grid-cols-2 gap-14 py-8">
-                    <div>
-                        <LineChartBlock />
+            <main className="container mx-auto gradientContainer">
+                <div className="relative m-[1px] bg-slate-900 rounded-md border border-transparent p-4">
+                    <div className="bg-slate-100 p-10 pb-14 rounded-md w-fit mx-auto">
+                        <motion.h1
+                            variants={childVariants}
+                            className="text-6xl font-extrabold textGradient"
+                        >
+                            ANIMATING GRADIENT
+                        </motion.h1>
                     </div>
-                    <div>
-                        <BarChartBlock />
-                    </div>
-                    <div>
-                        <RadialChartBlock />
+                    <div className="grid grid-cols-2 gap-14 py-8">
+                        <div>
+                            <LineChartBlock />
+                        </div>
+                        <div>
+                            <BarChartBlock />
+                        </div>
+                        <div>
+                            <RadialChartBlock />
+                        </div>
                     </div>
                 </div>
             </main>

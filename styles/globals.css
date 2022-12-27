@@ -31,3 +31,39 @@
         background-position: right;
     }
 }
+
+.gradientContainer {
+    /* box-shadow: 16px 13px 20px #eaeaea; */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(61, 60, 60);
+    z-index: 1001;
+}
+.gradientContainer::before {
+    content: "";
+    background-image: conic-gradient(
+        rgb(220, 222, 230),
+        rgb(47, 47, 90),
+        rgb(47, 47, 90),
+        rgb(47, 47, 90),
+        rgb(47, 47, 90),
+        rgb(220, 222, 230)
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    z-index: -1;
+    top: -30%;
+    left: -20%;
+    animation: rotateAnim 10s linear infinite;
+}
+
+@keyframes rotateAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
