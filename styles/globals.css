@@ -43,12 +43,21 @@
 .gradientContainer::before {
     content: "";
     background-image: conic-gradient(
-        rgb(220, 222, 230),
-        rgb(47, 47, 90),
-        rgb(47, 47, 90),
-        rgb(47, 47, 90),
-        rgb(47, 47, 90),
-        rgb(220, 222, 230)
+        rgb(88, 137, 250),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(15 23 42),
+        rgb(88, 137, 250)
     );
     width: 150%;
     height: 150%;
