@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import ContactFormBlock from "../components/ContactForm/_ContactFormBlock";
 import LineChartBlock from "../components/LineCharts/LineChartBlock";
 // import BarChartBlock from "../components/BarCharts/BarChartBlock";
 // import RadialChartBlock from "../components/RadialCharts/RadialChartBlock";
@@ -70,8 +71,13 @@ export default function Home() {
                         <div>
                             <BarChartBlock />
                         </div>
-                        <div>
-                            <RadialChartBlock />
+                    </div>
+                    <div className="grid grid-cols-2 gap-14 py-8 my-24">
+                        <div className="p-4">
+                            <ContactFormBlock blur="0px" />
+                        </div>
+                        <div className="p-4">
+                            <ContactFormBlock blur="200px" />
                         </div>
                     </div>
                 </div>
