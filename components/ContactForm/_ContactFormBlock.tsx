@@ -94,7 +94,7 @@ const ContactFormBlock = ({ blur }: IProps) => {
             </div>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-4 bg-stone-400 p-3 w-fit rounded-lg relative z-50"
+                className="flex flex-col gap-4 bg-zinc-800 p-3 w-fit rounded-lg relative z-50"
             >
                 <input
                     placeholder="Name*"
