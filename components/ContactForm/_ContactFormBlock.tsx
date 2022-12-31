@@ -23,10 +23,11 @@ const contactFormValidationSchema = yup.object().shape({
 });
 
 interface IProps {
-    blur: string;
+    filter: string;
 }
 
-const ContactFormBlock = ({ blur }: IProps) => {
+const ContactFormBlock = ({ filter }: IProps) => {
+    const blur = filter;
     const defaultValues = useMemo(() => {
         return {
             name: "",
@@ -58,11 +59,7 @@ const ContactFormBlock = ({ blur }: IProps) => {
 
     return (
         <div className="relative w-fit h-fit">
-            <div
-                className={`absolute -top-48 -right-20 blur-[${
-                    blur || "10px"
-                }]`}
-            >
+            <div className={`absolute -top-48 -right-20 blur-[200px]`}>
                 <Image
                     src="/assets/icons/polygon-1.svg"
                     height={300}
@@ -70,9 +67,7 @@ const ContactFormBlock = ({ blur }: IProps) => {
                     alt=""
                 />
             </div>
-            <div
-                className={`absolute -top-48 -left-16 blur-[${blur || "10px"}]`}
-            >
+            <div className={`absolute -top-48 -left-16 blur-[200px]`}>
                 <Image
                     src="/assets/icons/polygon-3.svg"
                     height={300}
@@ -80,11 +75,7 @@ const ContactFormBlock = ({ blur }: IProps) => {
                     alt=""
                 />
             </div>
-            <div
-                className={`absolute -bottom-48 -right-16 blur-[${
-                    blur || "10px"
-                }]`}
-            >
+            <div className={`absolute -bottom-48 -right-16 blur-[200px]`}>
                 <Image
                     src="/assets/icons/polygon-2.svg"
                     height={300}

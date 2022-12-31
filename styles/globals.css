@@ -76,3 +76,50 @@
         transform: rotate(360deg);
     }
 }
+
+.testGradient {
+    background: radial-gradient(
+        81.11% 147.05% at 2.17% 50%,
+        #4789c8 0%,
+        #d3e2e6 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+#map-left path {
+    fill: #8f8f8f;
+    animation: mapColorAnimLeft 7s ease-in-out infinite;
+}
+#map-right path {
+    fill: #8f8f8f;
+    animation: mapColorAnimRight 7s ease-in-out infinite;
+}
+
+@keyframes mapColorAnimLeft {
+    0% {
+        fill: #64caea;
+    }
+    33% {
+        fill: #4789c8;
+    }
+    66% {
+        fill: #8f8f8f;
+    }
+    100% {
+        fill: #64caea;
+    }
+}
+@keyframes mapColorAnimRight {
+    0% {
+        fill: #4789c8;
+    }
+    33% {
+        fill: #64caea;
+    }
+    66% {
+        fill: #8f8f8f;
+    }
+    100% {
+        fill: #4789c8;
+    }
+}

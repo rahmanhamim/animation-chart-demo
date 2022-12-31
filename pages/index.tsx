@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import ContactFormBlock from "../components/ContactForm/_ContactFormBlock";
 import LineChartBlock from "../components/LineCharts/LineChartBlock";
+import MicroserviceArchitectureBlock from "../components/MicroserviceArchitectureSection/_MicroserviceArchitectureBlock";
 // import BarChartBlock from "../components/BarCharts/BarChartBlock";
 // import RadialChartBlock from "../components/RadialCharts/RadialChartBlock";
 
@@ -52,10 +53,10 @@ export default function Home() {
             variants={containerVariant}
             initial="hidden"
             animate="visible"
-            className="bg-slate-900 overflow-hidden text-white min-h-screen p-8"
+            className="bg-black overflow-hidden text-white min-h-screen p-8"
         >
             <main className="container mx-auto gradientContainer">
-                <div className="relative m-[1px] bg-slate-900 rounded-md border border-transparent p-4">
+                <div className="relative m-[1px] bg-black rounded-md border border-transparent p-4 pb-[700px]">
                     <div className="bg-slate-100 p-10 pb-14 rounded-md w-fit mx-auto">
                         <motion.h1
                             variants={childVariants}
@@ -77,9 +78,10 @@ export default function Home() {
                             <RadialChartBlock />
                         </div>
                         <div className="p-4">
-                            <ContactFormBlock blur="200px" />
+                            <ContactFormBlock filter="200px" />
                         </div>
                     </div>
+                    {/* <MicroserviceArchitectureBlock /> */}
                 </div>
             </main>
         </motion.div>
