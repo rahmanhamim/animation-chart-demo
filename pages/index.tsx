@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import ContactFormBlock from "../components/ContactForm/_ContactFormBlock";
 import LineChartBlock from "../components/LineCharts/LineChartBlock";
 import MicroserviceArchitectureBlock from "../components/MicroserviceArchitectureSection/_MicroserviceArchitectureBlock";
+import PersonalizedSoftwareBlock from "../components/PersonalizedSoftware/_PersonalizedSoftwareBlock";
 // import BarChartBlock from "../components/BarCharts/BarChartBlock";
 // import RadialChartBlock from "../components/RadialCharts/RadialChartBlock";
 
@@ -82,6 +83,7 @@ export default function Home() {
                         </div>
                     </div>
                     {/* <MicroserviceArchitectureBlock /> */}
+                    <PersonalizedSoftwareBlock />
                 </div>
             </main>
         </motion.div>

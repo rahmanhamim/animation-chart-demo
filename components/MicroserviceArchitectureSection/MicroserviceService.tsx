@@ -22,7 +22,7 @@ const MicroserviceService = () => {
             {data.map((item, index) => {
                 return (
                     <div key={index} className="relative">
-                        <div className="absolute top-0 -left-5 h-[40%] w-1 bg-sky-600"></div>
+                        <div className="absolute top- -left-5 h-[40%] w-1 bg-sky-600"></div>
                         <h2 className="text-3xl max-w-[332px] leading-[40px]">
                             {item.title}
                         </h2>
