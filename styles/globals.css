@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* html,
+body,
+#root {
+    overflow: hidden;
+} */
+
 .textGradient {
     /* border: 2px solid red; */
     background-image: linear-gradient(
