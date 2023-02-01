@@ -65,12 +65,12 @@ export default function Home() {
             <div className="bg-slate-100 p-10 pb-14 rounded-md w-fit mx-auto">
               <motion.h1
                 variants={childVariants}
-                className="text-6xl font-extrabold textGradient"
+                className="text-6xl font-extrabold textGradient bg-clip-text"
               >
                 ANIMATING GRADIENT
               </motion.h1>
             </div>
-            <div className="grid grid-cols-2 gap-14 py-8">
+            <div className="grid grid-cols-2 gap-14 py-8 ">
               <div>
                 <LineChartBlock />
               </div>
